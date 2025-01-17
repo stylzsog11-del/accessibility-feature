@@ -7,7 +7,9 @@ This repository contains the starter files for the **Accessibility Feature Assig
 ## Objectives
 
 - Fork and clone the repository to work on a personal copy of the project.
+- Clone the project from your GitHub account for local development.
 - Create a feature branch for isolated development.
 - Implement a JavaScript-based light/dark theme toggle feature.
-- Publish changes to GitHub Pages for live testing.
+- Push your changes to your GitHub repo.
+- Publish changes to GitHub Pages using the feature branch as the source for live testing.
 - Submit a pull request to propose changes for review.
