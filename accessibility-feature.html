@@ -3,6 +3,8 @@
 
     <head>
         <meta charset="UTF-8">
+        <meta name="author" content="Your Name">
+        <meta name="description" content="This page includes content assisted by AI tools.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Accessibility Feature - Theme Toggle</title>
         <style>
@@ -71,6 +73,23 @@
             // TODO: Add JavaScript here to handle theme toggling.
             // Hint: Use document.getElementById() to select the button.
             // Check the article for step-by-step guidance!
+            // Select the theme toggle container
+            const toggleContainer = document.getElementById("theme-toggle-container");
+
+            // Check localStorage for saved theme
+            const savedTheme = localStorage.getItem("theme");
+
+               if (savedTheme === "dark") {
+                  document.body.classList.add("dark");
+              }
+
+            // Toggle theme on click
+             toggleContainer.addEventListener("click", () => {
+              document.body.classList.toggle("dark");
+
+             const currentTheme = document.body.classList.contains("dark") ? "dark" : "light";
+             localStorage.setItem("theme", currentTheme);
+         });
         </script>
     </body>
 
