@@ -49,42 +49,18 @@
     </style>
 </head>
 <body>
-    <div id="theme-toggle-container" tabindex="0" role="button" aria-pressed="false">
-        <span class="icon" aria-label="Accessibility Icon"></span>
+    <div id="theme-toggle-container" onclick="toggleTheme()">
+        <div class="icon"></div>
     </div>
-    <main class="content">
-        <h1>Welcome to the Accessibility Feature Demo</h1>
-        <p>
-            This page demonstrates a simple light/dark theme toggle feature implemented using JavaScript.
-            Click the icon in the upper-right corner to switch between themes. Your preference will be saved for future visits.
-        </p>
-    </main>
+    <div class="content">
+        <h1>Accessibility Feature - Theme Toggle</h1>
+        <p>This page demonstrates a simple theme toggle feature that allows users to switch between light and dark modes.</p>
+    </div>
+
     <script>
-        // Theme toggle logic by Myron Richardson
-        // Retrieve saved theme or default to light
-        const toggleContainer = document.getElementById("theme-toggle-container");
-        const savedTheme = localStorage.getItem("theme");
-        if (savedTheme === "dark") {
-            document.body.classList.add("dark");
-            toggleContainer.setAttribute("aria-pressed", "true");
-        }
-        // Toggle theme function
         function toggleTheme() {
-            document.body.classList.toggle("dark");
-            const isDark = document.body.classList.contains("dark");
-            toggleContainer.setAttribute("aria-pressed", isDark ? "true" : "false");
-            const currentTheme = isDark ? "dark" : "light";
-            localStorage.setItem("theme", currentTheme);
+            document.body.classList.toggle('dark');
         }
-        // Toggle theme on click
-        toggleContainer.addEventListener("click", toggleTheme);
-        // Toggle theme on Enter/Space key
-        toggleContainer.addEventListener("keydown", function(e) {
-            if (e.key === "Enter" || e.key === " ") {
-                e.preventDefault();
-                toggleTheme();
-            }
-        });
     </script>
 </body>
 </html>
